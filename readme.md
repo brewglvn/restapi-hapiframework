@@ -11,7 +11,7 @@ npm install
 node server.js
 ```
 
-The app will be served at `localhost:2000`.
+The app will be served at `localhost:5000`.
 
 ## Available Routes
 
