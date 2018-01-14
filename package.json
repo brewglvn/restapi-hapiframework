@@ -1,0 +1,25 @@
+{
+  "name": "football-rest-api",
+  "version": "1.0.0",
+  "description": "football-rest-api",
+  "main": "server.js",
+  "keywords": [
+    "authentication",
+    "jwt",
+    "api"
+  ],
+  "author": "Alex",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.3.0",
+    "boom": "^3.1.2",
+    "glob": "^7.0.0",
+    "hapi": "^13.0.0",
+    "hapi-auth-jwt": "^4.0.0",
+    "joi": "^8.0.4",
+    "joi-objectid": "^2.0.0",
+    "jsonwebtoken": "^5.7.0",
+    "nodemon": "^1.14.10",
+    "mongoose": "^4.4.5"
+  }
+}
