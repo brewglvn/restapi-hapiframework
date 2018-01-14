@@ -11,7 +11,7 @@ const server = new Hapi.Server();
 
 // The connection object takes some
 // configuration, including the port
-server.connection({ port: 8080, routes: { cors: true } });
+server.connection({ port: 5000, routes: { cors: true } });
 
 const dbUrl = 'mongodb://localhost:27017/football-data';
 
