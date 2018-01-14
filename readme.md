@@ -4,12 +4,11 @@ https://github.com/brewglvn/restapi-hapiframework
 
 ## Installation and Running the App
 
-Clone the repo, then: 
-
-```bash
-npm install
-node server.js
-```
+1. Install mongodb
+2. Run mongo server
+3. Clone the repo, then: 
+	npm install
+	node server.js
 
 The app will be served at `localhost:5000`.
 
