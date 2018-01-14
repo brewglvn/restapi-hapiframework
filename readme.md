@@ -7,8 +7,11 @@ https://github.com/brewglvn/restapi-hapiframework
 1. Install mongodb
 2. Run mongo server
 3. Clone the repo, then: 
-	npm install
-	node server.js
+
+```bash
+npm install
+node server.js
+```
 
 The app will be served at `localhost:5000`.
 
@@ -27,4 +30,5 @@ The app will be served at `localhost:5000`.
 * Updates a user. Requires `admin` scope.
 
 ...........................
+contin......
 ...........................
