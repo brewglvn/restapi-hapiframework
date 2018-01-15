@@ -29,6 +29,9 @@ The app will be served at `localhost:5000`.
 #### **POST** `/api/user/{id}`
 * Updates a user. Requires `admin` scope.
 
+#### **POST** `/api/user/del/{id}`
+* Delete a user. Requires `admin` scope.
+
 ...........................
 contin......
 ...........................
