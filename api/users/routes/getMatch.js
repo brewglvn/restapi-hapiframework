@@ -20,7 +20,11 @@ module.exports = {
             res(Boom.notFound('No matches found!'));
             return;
           }
-          res(matches);
+          res({
+            "statusCode": "200",
+            "success": "true",
+            "data": matches
+          });
         });
     },
     // Add authentication to this route

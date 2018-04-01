@@ -5,12 +5,13 @@ const Boom = require('boom');
 
 module.exports = {
   method: 'GET',
-  path: '/api/league',
+  path: '/api/league/{packagename}',
   config: {
     handler: (req, res) => {
-      League.find()
+      const packagename = req.params.packagename;
+      League.find({packagename : pack})
         // Deselect the password and version fields
-        .select('-__v -_id')
+        .select('-__v -_id -packagename')
         .exec((err, league) => {
           if (err) {
             res(Boom.badRequest(err));
@@ -23,6 +24,7 @@ module.exports = {
           res({
             "statusCode": "200",
             "success": "true",
+            "packagename": pack,
             "data": league
           });
         });

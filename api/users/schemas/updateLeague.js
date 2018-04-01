@@ -5,6 +5,8 @@ Joi.objectId = require('joi-objectid')(Joi);
 
 const payloadSchemaLeague = Joi.object({
   name: Joi.string(),
+  packagename: Joi.string(),
+  enable: Joi.boolean(),
   index: Joi.string()
 });
 

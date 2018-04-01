@@ -1,29 +1,30 @@
 'use strict';
 
-const League = require('../model/League');
+const Match = require('../model/Match');
 const Boom = require('boom');
 
 module.exports = {
   method: 'GET',
-  path: '/api/league',
+  path: '/api/matches/{index}',
   config: {
     handler: (req, res) => {
-      League.find()
+      const index = req.params.index;
+      Match.find({index : index})
         // Deselect the password and version fields
         .select('-__v -_id')
-        .exec((err, league) => {
+        .exec((err, matches) => {
           if (err) {
             res(Boom.badRequest(err));
             return;
           }
-          if (!league.length) {
-            res(Boom.notFound('No league found!'));
+          if (!matches.length) {
+            res(Boom.notFound('No matches found!'));
             return;
           }
           res({
             "statusCode": "200",
             "success": "true",
-            "data": league
+            "data": matches
           });
         });
     },
@@ -31,7 +32,7 @@ module.exports = {
     // The user must have a scope of `admin`
     auth: {
       strategy: 'jwt',
-      scope: ['admin', 'user']
+      scope: ['admin','user']
     }
   }
 };

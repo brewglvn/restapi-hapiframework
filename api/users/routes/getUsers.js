@@ -20,7 +20,11 @@ module.exports = {
             res(Boom.badRequest('No user found!'));
             return;
           }
-          res(users);
+          res({
+            "statusCode": "200",
+            "success": "true",
+            "data": users
+          });
         });
     },
     // Add authentication to this route

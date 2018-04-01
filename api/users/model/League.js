@@ -6,6 +6,8 @@ const Schema = mongoose.Schema;
 const leagueModel = new Schema({
   id: { type: mongoose.Schema.Types.ObjectId, required: true, auto: true, index: { unique: true } },
   name: { type: String, required: true},
+  packagename: { type: String, required: true},
+  enable: { type: Boolean, required: true},
   index: { type: String, required: true },
 });
 

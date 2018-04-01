@@ -17,6 +17,8 @@ module.exports = {
         handler: (req, res) => {
             let league = new League();
             league.name = req.payload.name;
+            league.packagename = req.payload.packagename;
+            league.enable = req.payload.enable;
             league.index = req.payload.index;
             league.save((err, league) => {
                 if (err) {
